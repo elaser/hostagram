@@ -43,6 +43,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+ We populate our images by grabbing two selfies.  If there are no selfies, then what should happen is there should be an indicator.  I would have liked to write that in, so that we don't have to worry about the case where there aren't any selfies!!
+ */
+
 - (void) populateImages {
     //Populate our selfie images!
     NSArray *dosSelfiesArray = [[RESTHelper sharedInstance] obtainTwoSelfies];
@@ -68,6 +72,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - IBActions
+/*
+ Depending on which image gets clicked on, we will choose that image as the winner, and the other image as the loser.  We will then package up this information and have the RESTHelper send out the necessary results to our backend.
+ */
 
 - (IBAction)m1ClickedOn:(id)sender {
     [[RESTHelper sharedInstance] recordResultOfBattleWithWinner:_m1 withLoser:_m2];

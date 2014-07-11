@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 ahsieh. All rights reserved.
 //
 
+/*
+ RESTHelper will do most of the REST calls, this is the layer responsible for making the correct REST calls
+ */
+
 #import <Foundation/Foundation.h>
 
 @class AFHTTPRequestOperation;

@@ -43,10 +43,13 @@ static FICHelper *_sharedInstance = nil;
 
 #pragma mark - FICImageCacheDelegate
 - (void)imageCache:(FICImageCache *)imageCache wantsSourceImageForEntity:(id<FICEntity>)entity withFormatName:(NSString *)formatName completionBlock:(FICImageRequestCompletionBlock)completionBlock {
-    [[AFHTTPSessionManager manager] GET:[entity sourceImageURLWithFormatName:formatName].absoluteString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"responseObject is %@", responseObject);
-        completionBlock(responseObject);
-    } failure:nil];
+    NSURL *image_url = [entity sourceImageURLWithFormatName:formatName];
+    NSData *data = [NSData dataWithContentsOfURL:image_url];
+    UIImage *img = [UIImage imageWithData:data];
+    if (img)
+        completionBlock(img);
+    else
+        completionBlock(nil);
 }
 
 @end

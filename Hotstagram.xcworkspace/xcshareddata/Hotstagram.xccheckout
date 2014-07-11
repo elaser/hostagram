@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C0609E04-EF63-43FA-BE10-D9861592F985</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hotstagram</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5E977594-FFD3-40F4-A34B-377F33ED7218</key>
+		<string>ssh://github.com/elaser/hostagram.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hotstagram.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5E977594-FFD3-40F4-A34B-377F33ED7218</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/elaser/hostagram.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5E977594-FFD3-40F4-A34B-377F33ED7218</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E977594-FFD3-40F4-A34B-377F33ED7218</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hotstagram</string>
+		</dict>
+	</array>
+</dict>
+</plist>

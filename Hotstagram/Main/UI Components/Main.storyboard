@@ -16,16 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-cf-IDp">
+                            <imageView appearanceType="aqua" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-cf-IDp">
                                 <rect key="frame" x="40" y="31" width="225" height="225"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="G6v-rN-PZH" appends="YES" id="9jC-VB-wek"/>
+                                </connections>
                             </imageView>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4S-Ni-YUv">
+                            <imageView appearanceType="aqua" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4S-Ni-YUv">
                                 <rect key="frame" x="40" y="279" width="225" height="225"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ZHa-Un-U6m" appends="YES" id="qDJ-bv-2zG"/>
+                                </connections>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" id="FrS-fT-0xX"/>
                     <connections>
@@ -34,6 +42,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWy-mA-Qra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="G6v-rN-PZH">
+                    <connections>
+                        <action selector="m1ClickedOn:" destination="Nrn-Eo-9BH" id="11x-pW-HIQ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZHa-Un-U6m">
+                    <connections>
+                        <action selector="m2ClickedOn:" destination="Nrn-Eo-9BH" id="FSU-SO-t4B"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="764" y="-901"/>
         </scene>

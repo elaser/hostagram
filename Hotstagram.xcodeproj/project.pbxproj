@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EBE07B8196F7A49005E349C /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE07B7196F7A49005E349C /* MainTabViewController.m */; };
+		0EBE07BF196F7E2C005E349C /* MediaCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE07BE196F7E2C005E349C /* MediaCard.m */; };
+		0EBE07C2196F7F2E005E349C /* FICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE07C1196F7F2E005E349C /* FICHelper.m */; };
 		0EF851B1196F633800810EB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B0196F633800810EB7 /* Foundation.framework */; };
 		0EF851B3196F633800810EB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B2196F633800810EB7 /* CoreGraphics.framework */; };
 		0EF851B5196F633800810EB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B4196F633800810EB7 /* UIKit.framework */; };
@@ -41,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EBE07B6196F7A49005E349C /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabViewController.h; path = "Main/View Controllers/MainTabViewController.h"; sourceTree = "<group>"; };
+		0EBE07B7196F7A49005E349C /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabViewController.m; path = "Main/View Controllers/MainTabViewController.m"; sourceTree = "<group>"; };
+		0EBE07BD196F7E2C005E349C /* MediaCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaCard.h; path = Models/MediaCard.h; sourceTree = "<group>"; };
+		0EBE07BE196F7E2C005E349C /* MediaCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaCard.m; path = Models/MediaCard.m; sourceTree = "<group>"; };
+		0EBE07C0196F7F2E005E349C /* FICHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FICHelper.h; path = Helpers/FICHelper.h; sourceTree = "<group>"; };
+		0EBE07C1196F7F2E005E349C /* FICHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FICHelper.m; path = Helpers/FICHelper.m; sourceTree = "<group>"; };
 		0EF851AD196F633800810EB7 /* Hotstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF851B0196F633800810EB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0EF851B2196F633800810EB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EBE07B9196F7DEB005E349C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0EBE07BD196F7E2C005E349C /* MediaCard.h */,
+				0EBE07BE196F7E2C005E349C /* MediaCard.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0EF851A4196F633800810EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +153,7 @@
 		0EF851B8196F633800810EB7 /* Hotstagram */ = {
 			isa = PBXGroup;
 			children = (
+				0EBE07B9196F7DEB005E349C /* Models */,
 				0EF851F7196F6B0E00810EB7 /* Authorization */,
 				0EF851F0196F678D00810EB7 /* Helpers */,
 				0EF851E5196F633E00810EB7 /* Main */,
@@ -198,6 +217,8 @@
 			children = (
 				0EF851EC196F63EF00810EB7 /* MainViewController.h */,
 				0EF851ED196F63EF00810EB7 /* MainViewController.m */,
+				0EBE07B6196F7A49005E349C /* MainTabViewController.h */,
+				0EBE07B7196F7A49005E349C /* MainTabViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -209,6 +230,8 @@
 				0EF851F2196F67A600810EB7 /* Constants.m */,
 				0EF851F4196F684C00810EB7 /* RESTHelper.h */,
 				0EF851F5196F684C00810EB7 /* RESTHelper.m */,
+				0EBE07C0196F7F2E005E349C /* FICHelper.h */,
+				0EBE07C1196F7F2E005E349C /* FICHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -353,11 +376,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EBE07C2196F7F2E005E349C /* FICHelper.m in Sources */,
 				0EF851F3196F67A600810EB7 /* Constants.m in Sources */,
 				0EF851C3196F633800810EB7 /* AppDelegate.m in Sources */,
+				0EBE07BF196F7E2C005E349C /* MediaCard.m in Sources */,
 				0EF851BF196F633800810EB7 /* main.m in Sources */,
 				0EF851C6196F633800810EB7 /* Hotstagram.xcdatamodeld in Sources */,
 				0EF851EE196F63EF00810EB7 /* MainViewController.m in Sources */,
+				0EBE07B8196F7A49005E349C /* MainTabViewController.m in Sources */,
 				0EF851F6196F684C00810EB7 /* RESTHelper.m in Sources */,
 				0EF851FA196F6B2700810EB7 /* AuthorizationViewController.m in Sources */,
 			);

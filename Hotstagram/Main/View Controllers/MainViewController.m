@@ -7,6 +7,9 @@
 //
 
 #import "MainViewController.h"
+#import "RESTHelper.h"
+#import "MediaCard.h"
+#import <FastImageCache/FICImageCache.h>
 
 @interface MainViewController ()
 
@@ -27,12 +30,23 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) populateImages {
+    //Populate our selfie images!
+    NSArray *dosSelfiesArray = [[RESTHelper sharedInstance] obtainTwoSelfies];
+    MediaCard *m1 = [dosSelfiesArray firstObject];
+    MediaCard *m2 = [dosSelfiesArray lastObject];
+    
+    
 }
 
 /*

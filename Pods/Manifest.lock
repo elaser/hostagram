@@ -20,11 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FastImageCache (1.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.2)
+  - FastImageCache
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
+  FastImageCache: f0897a850a1479a95b1415eb88ed1fdce708353a
 
 COCOAPODS: 0.32.1

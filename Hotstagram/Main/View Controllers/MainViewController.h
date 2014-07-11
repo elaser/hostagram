@@ -10,4 +10,7 @@
 
 @interface MainViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *selfieA;
+@property (weak, nonatomic) IBOutlet UIImageView *selfieB;
+
 @end

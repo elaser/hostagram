@@ -13,10 +13,13 @@
 @interface RESTHelper : NSObject
 
 @property NSString *accessTokenString;
+@property NSMutableArray *allMediaCards;
 
 + (RESTHelper *) sharedInstance;
 
+- (NSArray *) processRecentMedia: (NSArray *) mediaArray;
 - (void) obtainRecentMediaWithTag: (NSString *) tag;
 - (void) authenticateUser;
+- (NSArray *) obtainTwoSelfies;
 
 @end

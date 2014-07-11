@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FICHelper.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [FICHelper sharedInstance];
     return YES;
 }
 

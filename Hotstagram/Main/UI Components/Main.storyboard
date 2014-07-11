@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Main-->
+        <!--Main View Controller - Main-->
         <scene sceneID="g5j-Bh-1nW">
             <objects>
-                <viewController id="Nrn-Eo-9BH" sceneMemberID="viewController">
+                <viewController id="Nrn-Eo-9BH" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qLG-aT-vmc"/>
                         <viewControllerLayoutGuide type="bottom" id="zR0-Or-3bO"/>
@@ -15,9 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="OSH-yr-jYx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-cf-IDp">
+                                <rect key="frame" x="40" y="31" width="225" height="225"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4S-Ni-YUv">
+                                <rect key="frame" x="40" y="279" width="225" height="225"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" id="FrS-fT-0xX"/>
+                    <connections>
+                        <outlet property="selfieA" destination="dvx-cf-IDp" id="F6Q-0V-wu0"/>
+                        <outlet property="selfieB" destination="b4S-Ni-YUv" id="BoH-5N-kCS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWy-mA-Qra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="230" y="-1319"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab View Controller-->
         <scene sceneID="uQu-y0-DCU">
             <objects>
-                <tabBarController storyboardIdentifier="main_tab" definesPresentationContext="YES" id="Dxh-FI-cEP" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="main_tab" definesPresentationContext="YES" id="Dxh-FI-cEP" customClass="MainTabViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="yiW-59-Xpk">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>

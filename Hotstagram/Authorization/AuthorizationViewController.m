@@ -33,6 +33,15 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAuthenticationNotification:) name:@"authorization" object:nil];
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSString *checkAccessToken = [[NSUserDefaults standardUserDefaults] objectForKey:kHOTDefaultsAccessTokenKey];
+    if (checkAccessToken) {
+        [RESTHelper sharedInstance].accessTokenString = checkAccessToken;
+        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"main_tab"] animated:YES completion:nil];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

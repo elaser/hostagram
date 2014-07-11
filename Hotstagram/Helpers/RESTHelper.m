@@ -45,9 +45,9 @@ static RESTHelper *_sharedInstance;
      */
 }
 
-- (void) authenticateUserWithSuccess: (void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+- (void) authenticateUser {
     //Form query parameters
-    NSString *authenticationString = [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@&response_type=code", kINStagramAuthorizationURL, kINStagramClientID, kHOTredirectionURI];
+    NSString *authenticationString = [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@&response_type=token", kINStagramAuthorizationURL, kINStagramClientID, kHOTredirectionURI];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:authenticationString]];
     //[_sharedInstance.manager GET:kINStagramAuthorizationURL parameters:queryParameters success:success failure:failure];
 }

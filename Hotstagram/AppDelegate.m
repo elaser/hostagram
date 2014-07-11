@@ -47,6 +47,31 @@
     [self saveContext];
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    // handler code here
+    NSString *urlString = url.relativeString;
+    
+    
+    
+    NSRange errorRange = [urlString rangeOfString:@"error_reason"];
+    if (errorRange.location != NSNotFound) {
+        //This means that there was an error
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"authorization" object:nil];
+    }
+    else {
+        NSArray *myArray = [urlString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"="]];
+        if (myArray.count <= 1) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"authorization" object:nil];
+        }
+        else {
+            NSLog(@"[myArray objectAtIndex:1] is %@", [myArray objectAtIndex:1]);
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"authorization" object:[myArray objectAtIndex:1]];
+        }
+
+    }
+    return YES;
+}
+
 - (void)saveContext
 {
     NSError *error = nil;

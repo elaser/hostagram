@@ -12,9 +12,11 @@
 
 @interface RESTHelper : NSObject
 
+@property NSString *accessTokenString;
+
 + (RESTHelper *) sharedInstance;
 
 - (void) obtainRecentMediaWithTag: (NSString *) tag;
-- (void) authenticateUserWithSuccess: (void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (void) authenticateUser;
 
 @end

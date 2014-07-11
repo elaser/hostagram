@@ -18,3 +18,5 @@ NSString *const kINStagramBaseURL = @"https://api.instagram.com/v1";
 NSString *const kINStagramAuthorizationURL = @"https://api.instagram.com/oauth/authorize/";
 
 NSString *const kHOTredirectionURI = @"igfc19e1c6f3f34713a27b3d7b3b97ac60://authorize";
+
+NSString *const kHOTDefaultsAccessTokenKey = @"defaults-access-token";

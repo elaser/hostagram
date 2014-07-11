@@ -9,6 +9,7 @@
 #import "AuthorizationViewController.h"
 #import "RESTHelper.h"
 #import <AFNetworking/AFNetworking.h>
+#import "Constants.h"
 
 @interface AuthorizationViewController ()
 
@@ -29,12 +30,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleAuthenticationNotification:) name:@"authorization" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"authorization" object:nil];
 }
 
 /*
@@ -48,18 +54,27 @@
 }
 */
 
+#pragma mark - NSNotificationCenter
+- (void) handleAuthenticationNotification: (NSNotification *)notification {
+    if (!notification.object) {
+        //We assume this is an error
+        [[[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Please allow us to access your Instagram account!  Don't you want to see your Hostagram score?" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil] show];
+    }
+    else {
+        NSString *accessToken = notification.object;
+        [[NSUserDefaults standardUserDefaults] setObject:accessToken forKey:kHOTDefaultsAccessTokenKey];
+        [RESTHelper sharedInstance].accessTokenString = accessToken;
+        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"main_tab"] animated:YES completion:nil];
+    }
+}
+
 
 #pragma mark - IBActions
 /*
  * clickLoginButton - we need to authenticate the user via Instagram to obtain the Accesss Token
  */
 - (IBAction)clickLoginButton:(id)sender {
-    [[RESTHelper sharedInstance] authenticateUserWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"responseObject is %@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"error is %@", error);
-    }
-     ];
+    [[RESTHelper sharedInstance] authenticateUser];
 }
 
 

@@ -22,6 +22,10 @@
 		0EF851D2196F633800810EB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B6196F633800810EB7 /* CoreData.framework */; };
 		0EF851DA196F633800810EB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EF851D8196F633800810EB7 /* InfoPlist.strings */; };
 		0EF851DC196F633900810EB7 /* HotstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851DB196F633900810EB7 /* HotstagramTests.m */; };
+		0EF851EA196F638F00810EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF851E9196F638F00810EB7 /* Main.storyboard */; };
+		0EF851EE196F63EF00810EB7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851ED196F63EF00810EB7 /* MainViewController.m */; };
+		0EF851F3196F67A600810EB7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851F2196F67A600810EB7 /* Constants.m */; };
+		0EF851F6196F684C00810EB7 /* RESTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851F5196F684C00810EB7 /* RESTHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		0EF851D7196F633800810EB7 /* HotstagramTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HotstagramTests-Info.plist"; sourceTree = "<group>"; };
 		0EF851D9196F633800810EB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0EF851DB196F633900810EB7 /* HotstagramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotstagramTests.m; sourceTree = "<group>"; };
+		0EF851E9196F638F00810EB7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "Main/UI Components/Main.storyboard"; sourceTree = "<group>"; };
+		0EF851EC196F63EF00810EB7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = "Main/View Controllers/MainViewController.h"; sourceTree = "<group>"; };
+		0EF851ED196F63EF00810EB7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = "Main/View Controllers/MainViewController.m"; sourceTree = "<group>"; };
+		0EF851F1196F67A600810EB7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Helpers/Constants.h; sourceTree = "<group>"; };
+		0EF851F2196F67A600810EB7 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Helpers/Constants.m; sourceTree = "<group>"; };
+		0EF851F4196F684C00810EB7 /* RESTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTHelper.h; path = Helpers/RESTHelper.h; sourceTree = "<group>"; };
+		0EF851F5196F684C00810EB7 /* RESTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTHelper.m; path = Helpers/RESTHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +126,8 @@
 		0EF851B8196F633800810EB7 /* Hotstagram */ = {
 			isa = PBXGroup;
 			children = (
+				0EF851F0196F678D00810EB7 /* Helpers */,
+				0EF851E5196F633E00810EB7 /* Main */,
 				0EF851C1196F633800810EB7 /* AppDelegate.h */,
 				0EF851C2196F633800810EB7 /* AppDelegate.m */,
 				0EF851C7196F633800810EB7 /* Images.xcassets */,
@@ -151,6 +164,43 @@
 				0EF851D8196F633800810EB7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EF851E5196F633E00810EB7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851EB196F63D500810EB7 /* View Controllers */,
+				0EF851E6196F635600810EB7 /* UI Components */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		0EF851E6196F635600810EB7 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851E9196F638F00810EB7 /* Main.storyboard */,
+			);
+			name = "UI Components";
+			sourceTree = "<group>";
+		};
+		0EF851EB196F63D500810EB7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851EC196F63EF00810EB7 /* MainViewController.h */,
+				0EF851ED196F63EF00810EB7 /* MainViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0EF851F0196F678D00810EB7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851F1196F67A600810EB7 /* Constants.h */,
+				0EF851F2196F67A600810EB7 /* Constants.m */,
+				0EF851F4196F684C00810EB7 /* RESTHelper.h */,
+				0EF851F5196F684C00810EB7 /* RESTHelper.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF851EA196F638F00810EB7 /* Main.storyboard in Resources */,
 				0EF851BD196F633800810EB7 /* InfoPlist.strings in Resources */,
 				0EF851C8196F633800810EB7 /* Images.xcassets in Resources */,
 			);
@@ -248,9 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF851F3196F67A600810EB7 /* Constants.m in Sources */,
 				0EF851C3196F633800810EB7 /* AppDelegate.m in Sources */,
 				0EF851BF196F633800810EB7 /* main.m in Sources */,
 				0EF851C6196F633800810EB7 /* Hotstagram.xcdatamodeld in Sources */,
+				0EF851EE196F63EF00810EB7 /* MainViewController.m in Sources */,
+				0EF851F6196F684C00810EB7 /* RESTHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

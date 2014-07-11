@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class AFHTTPRequestOperation;
+@class MediaCard;
 
 @interface RESTHelper : NSObject
 
@@ -22,4 +23,7 @@
 - (void) authenticateUser;
 - (NSArray *) obtainTwoSelfies;
 
+- (void) recordResultOfBattleWithWinner: (MediaCard *) winner withLoser: (MediaCard *) loser;
+- (void) getTopScoresWithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 @end

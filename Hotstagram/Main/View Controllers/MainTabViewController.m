@@ -8,6 +8,7 @@
 
 #import "MainTabViewController.h"
 #import "RESTHelper.h"
+#import "Constants.h"
 
 @interface MainTabViewController ()
 
@@ -28,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[RESTHelper sharedInstance] obtainRecentMediaWithTag:@"selfie"];
+    [[RESTHelper sharedInstance] obtainRecentMediaWithTag:kHOTTag];
 }
 
 - (void)didReceiveMemoryWarning

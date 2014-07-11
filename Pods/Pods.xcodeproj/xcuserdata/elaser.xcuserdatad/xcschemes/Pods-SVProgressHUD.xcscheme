@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9BF5FCC10A9C4DF3AD4FAE82"
-               BuildableName = "libPods-FastImageCache.a"
-               BlueprintName = "Pods-FastImageCache"
+               BlueprintIdentifier = "B87434F4DAE24883B473C460"
+               BuildableName = "libPods-SVProgressHUD.a"
+               BlueprintName = "Pods-SVProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

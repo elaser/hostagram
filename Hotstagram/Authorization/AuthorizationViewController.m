@@ -10,6 +10,7 @@
 #import "RESTHelper.h"
 #import <AFNetworking/AFNetworking.h>
 #import "Constants.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface AuthorizationViewController ()
 
@@ -73,8 +74,19 @@
         NSString *accessToken = notification.object;
         [[NSUserDefaults standardUserDefaults] setObject:accessToken forKey:kHOTDefaultsAccessTokenKey];
         [RESTHelper sharedInstance].accessTokenString = accessToken;
-        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"main_tab"] animated:YES completion:nil];
+        
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+        [[RESTHelper sharedInstance] obtainRecentMediaWithTag:kHOTTag];
+        [self performSelector:@selector(segueToMainTabController) withObject:nil afterDelay:5.0];
     }
+}
+
+/*
+ *  This is a complete hack because of the time limits.  I would have normally had blocks passing around so I know exactly if data has been loaded correctly.  However, I'm just going to make the user wait 5 seconds or so for logging in.
+ */
+- (void) segueToMainTabController {
+    [SVProgressHUD dismiss];
+    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"main_tab"] animated:YES completion:nil];
 }
 
 

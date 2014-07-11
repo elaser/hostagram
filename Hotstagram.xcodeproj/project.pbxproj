@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EA536EF196F9AA9000ADD4A /* StatsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA536EE196F9AA9000ADD4A /* StatsTableViewController.m */; };
 		0EBE07B8196F7A49005E349C /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE07B7196F7A49005E349C /* MainTabViewController.m */; };
 		0EBE07BF196F7E2C005E349C /* MediaCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE07BE196F7E2C005E349C /* MediaCard.m */; };
 		0EBE07C2196F7F2E005E349C /* FICHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBE07C1196F7F2E005E349C /* FICHelper.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EA536ED196F9AA9000ADD4A /* StatsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsTableViewController.h; path = "Main/View Controllers/StatsTableViewController.h"; sourceTree = "<group>"; };
+		0EA536EE196F9AA9000ADD4A /* StatsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsTableViewController.m; path = "Main/View Controllers/StatsTableViewController.m"; sourceTree = "<group>"; };
 		0EBE07B6196F7A49005E349C /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabViewController.h; path = "Main/View Controllers/MainTabViewController.h"; sourceTree = "<group>"; };
 		0EBE07B7196F7A49005E349C /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabViewController.m; path = "Main/View Controllers/MainTabViewController.m"; sourceTree = "<group>"; };
 		0EBE07BD196F7E2C005E349C /* MediaCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaCard.h; path = Models/MediaCard.h; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 				0EF851ED196F63EF00810EB7 /* MainViewController.m */,
 				0EBE07B6196F7A49005E349C /* MainTabViewController.h */,
 				0EBE07B7196F7A49005E349C /* MainTabViewController.m */,
+				0EA536ED196F9AA9000ADD4A /* StatsTableViewController.h */,
+				0EA536EE196F9AA9000ADD4A /* StatsTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 			files = (
 				0EBE07C2196F7F2E005E349C /* FICHelper.m in Sources */,
 				0EF851F3196F67A600810EB7 /* Constants.m in Sources */,
+				0EA536EF196F9AA9000ADD4A /* StatsTableViewController.m in Sources */,
 				0EF851C3196F633800810EB7 /* AppDelegate.m in Sources */,
 				0EBE07BF196F7E2C005E349C /* MediaCard.m in Sources */,
 				0EF851BF196F633800810EB7 /* main.m in Sources */,

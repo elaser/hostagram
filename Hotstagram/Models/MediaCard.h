@@ -21,4 +21,6 @@
 
 + (MediaCard *) buildMediaCardFromDictionary: (NSDictionary *)dictionary;
 
+- (NSDictionary *) buildContestantDictionary;
+
 @end

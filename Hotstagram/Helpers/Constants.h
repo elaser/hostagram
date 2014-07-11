@@ -17,6 +17,8 @@ extern NSString *const kINStagramAuthorizationURL;
 
 extern NSString *const kHOTredirectionURI;
 extern NSString *const kHOTDefaultsAccessTokenKey;
+extern NSString *const kHOTBackendURL;
+extern NSString *const kHOTTag;
 
 extern NSString *const kFICRegularPictureName;
 

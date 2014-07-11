@@ -69,6 +69,21 @@
     return media;
 }
 
+/*
+ * buildContestantDictionary - Given a contest, we want to put all of his information into a dictionary so that we can send this up to the backend
+ */
+- (NSDictionary *) buildContestantDictionary {
+    NSDictionary *contestantDictionary = @{@"username": self.username,
+                                            @"user_id": self.user_id,
+                                            @"full_name": self.user_fullname,
+                                            };
+    return contestantDictionary;
+}
+
+
+/*
+ * For debugging purporses - we want to be able to print out of all the values.  You can just po on lldb, but sometimes it's nice to be able to print it out :)
+ */
 - (void) printOutValues {
     NSLog(@"username is %@", self.username);
     NSLog(@"user_fullname is %@", self.user_fullname);

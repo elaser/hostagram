@@ -14,6 +14,9 @@
 
 @interface MainViewController ()
 
+@property MediaCard *m1;
+@property MediaCard *m2;
+
 @end
 
 @implementation MainViewController
@@ -31,7 +34,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self populateImages];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,14 +46,14 @@
 - (void) populateImages {
     //Populate our selfie images!
     NSArray *dosSelfiesArray = [[RESTHelper sharedInstance] obtainTwoSelfies];
-    MediaCard *m1 = [dosSelfiesArray firstObject];
-    MediaCard *m2 = [dosSelfiesArray lastObject];
+    _m1 = [dosSelfiesArray firstObject];
+    _m2 = [dosSelfiesArray lastObject];
     
-    [[FICImageCache sharedImageCache] retrieveImageForEntity:m1 withFormatName:kFICRegularPictureName completionBlock:^(id<FICEntity> entity, NSString *formatName, UIImage *image) {
+    [[FICImageCache sharedImageCache] retrieveImageForEntity:_m1 withFormatName:kFICRegularPictureName completionBlock:^(id<FICEntity> entity, NSString *formatName, UIImage *image) {
         _selfieA.image = image;
     }];
     
-    [[FICImageCache sharedImageCache] retrieveImageForEntity:m2 withFormatName:kFICRegularPictureName completionBlock:^(id<FICEntity> entity, NSString *formatName, UIImage *image) {
+    [[FICImageCache sharedImageCache] retrieveImageForEntity:_m2 withFormatName:kFICRegularPictureName completionBlock:^(id<FICEntity> entity, NSString *formatName, UIImage *image) {
         _selfieB.image = image;
     }];
 }
@@ -67,12 +70,12 @@
 */
 
 - (IBAction)m1ClickedOn:(id)sender {
-    NSLog(@"m1 clicked on");
+    [[RESTHelper sharedInstance] recordResultOfBattleWithWinner:_m1 withLoser:_m2];
     [self populateImages];
 }
 
 - (IBAction)m2ClickedOn:(id)sender {
-    NSLog(@"M2 clicked on");
+    [[RESTHelper sharedInstance] recordResultOfBattleWithWinner:_m2 withLoser:_m1];
     [self populateImages];
 }
 

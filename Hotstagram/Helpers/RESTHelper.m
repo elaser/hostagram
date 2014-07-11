@@ -31,6 +31,7 @@ static RESTHelper *_sharedInstance;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[RESTHelper alloc] init];
         _sharedInstance.manager = [AFHTTPRequestOperationManager manager];
+
         _sharedInstance.allMediaCards = [NSMutableArray array];
     });
     return _sharedInstance;
@@ -39,7 +40,6 @@ static RESTHelper *_sharedInstance;
 - (void) obtainRecentMediaWithTag: (NSString *) tag {
     //Form Tag String
     NSString *recentMediaTagString = [NSString stringWithFormat:@"%@/tags/%@/media/recent", kINStagramBaseURL, tag];
-    NSLog(@"recentMediaTagString is %@", recentMediaTagString);
     //Query Parameters
     NSDictionary *queryParameters = @{@"access_token": _sharedInstance.accessTokenString, @"COUNT":@(4)};
     [_sharedInstance.manager GET:recentMediaTagString parameters:queryParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -58,7 +58,6 @@ static RESTHelper *_sharedInstance;
         if (currentMedia)
             [recentMediaArray addObject:currentMedia];
     }
-    NSLog(@"recentMediaArray.count is %d", recentMediaArray.count);
     return recentMediaArray;
 }
 
@@ -68,20 +67,23 @@ static RESTHelper *_sharedInstance;
  */
 - (NSArray *) obtainTwoSelfies {
     if (_sharedInstance.allMediaCards.count < 2) {
-        [self obtainRecentMediaWithTag:@"selfie"];
+        [self obtainRecentMediaWithTag:kHOTTag];
         return nil;
     }
     else {
-        NSLog(@"_sharedInstance.allMediaCards.count is %d", _sharedInstance.allMediaCards.count);
+        if (_sharedInstance.allMediaCards.count < 10) {
+            [self obtainRecentMediaWithTag:kHOTTag];
+        }
         NSArray *dosSelfiesArray = @[_sharedInstance.allMediaCards[0], _sharedInstance.allMediaCards[1]];
         [_sharedInstance.allMediaCards removeObjectAtIndex:0];
         [_sharedInstance.allMediaCards removeObjectAtIndex:0];
-        NSLog(@"_sharedInstance.allMediaCards.count is %d", _sharedInstance.allMediaCards.count);
         return dosSelfiesArray;
     }
 }
 
-
+/*
+ * I ran out of time to make this pass back blocks, but it would be a lot better so that we can sideload and execute code after the necessary objects have been grabbed.
+ */
 - (void) authenticateUser {
     //Form query parameters
     NSString *authenticationString = [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@&response_type=token", kINStagramAuthorizationURL, kINStagramClientID, kHOTredirectionURI];
@@ -89,4 +91,27 @@ static RESTHelper *_sharedInstance;
     //[_sharedInstance.manager GET:kINStagramAuthorizationURL parameters:queryParameters success:success failure:failure];
 }
 
+
+/*
+ * recordResultOfBattle - We will require two parameters : selfie1 and selfie 2.  We will send this information up to the backend so that the backend can parse the battle and record appropriately
+ */
+- (void) recordResultOfBattleWithWinner: (MediaCard *) winner withLoser: (MediaCard *) loser {
+    //We need to create a dictionary with the winner and loser
+    if (!winner || !loser)
+        return;
+    
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSDictionary *battleDictionary = @{@"battle": @{@"winner": [winner buildContestantDictionary], @"loser": [loser buildContestantDictionary]}};
+        
+        NSString *battleRecordURL = [NSString stringWithFormat:@"%@/battles", kHOTBackendURL];
+        [_sharedInstance.manager POST:battleRecordURL parameters:battleDictionary success:nil failure:nil];
+    });
+}
+
+
+- (void) getTopScoresWithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSString *scoresString = [NSString stringWithFormat:@"%@/scores", kHOTBackendURL];
+    [_sharedInstance.manager GET:scoresString parameters:nil success:success failure:failure];
+}
 @end

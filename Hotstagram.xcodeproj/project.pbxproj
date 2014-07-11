@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EF851B1196F633800810EB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B0196F633800810EB7 /* Foundation.framework */; };
+		0EF851B3196F633800810EB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B2196F633800810EB7 /* CoreGraphics.framework */; };
+		0EF851B5196F633800810EB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B4196F633800810EB7 /* UIKit.framework */; };
+		0EF851B7196F633800810EB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B6196F633800810EB7 /* CoreData.framework */; };
+		0EF851BD196F633800810EB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EF851BB196F633800810EB7 /* InfoPlist.strings */; };
+		0EF851BF196F633800810EB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851BE196F633800810EB7 /* main.m */; };
+		0EF851C3196F633800810EB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851C2196F633800810EB7 /* AppDelegate.m */; };
+		0EF851C6196F633800810EB7 /* Hotstagram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851C4196F633800810EB7 /* Hotstagram.xcdatamodeld */; };
+		0EF851C8196F633800810EB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF851C7196F633800810EB7 /* Images.xcassets */; };
+		0EF851CF196F633800810EB7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851CE196F633800810EB7 /* XCTest.framework */; };
+		0EF851D0196F633800810EB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B0196F633800810EB7 /* Foundation.framework */; };
+		0EF851D1196F633800810EB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B4196F633800810EB7 /* UIKit.framework */; };
+		0EF851D2196F633800810EB7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF851B6196F633800810EB7 /* CoreData.framework */; };
+		0EF851DA196F633800810EB7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EF851D8196F633800810EB7 /* InfoPlist.strings */; };
+		0EF851DC196F633900810EB7 /* HotstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851DB196F633900810EB7 /* HotstagramTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EF851D3196F633800810EB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EF851A5196F633800810EB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EF851AC196F633800810EB7;
+			remoteInfo = Hotstagram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EF851AD196F633800810EB7 /* Hotstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EF851B0196F633800810EB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0EF851B2196F633800810EB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0EF851B4196F633800810EB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0EF851B6196F633800810EB7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0EF851BA196F633800810EB7 /* Hotstagram-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hotstagram-Info.plist"; sourceTree = "<group>"; };
+		0EF851BC196F633800810EB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0EF851BE196F633800810EB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0EF851C0196F633800810EB7 /* Hotstagram-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hotstagram-Prefix.pch"; sourceTree = "<group>"; };
+		0EF851C1196F633800810EB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0EF851C2196F633800810EB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0EF851C5196F633800810EB7 /* Hotstagram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hotstagram.xcdatamodel; sourceTree = "<group>"; };
+		0EF851C7196F633800810EB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0EF851CD196F633800810EB7 /* HotstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EF851CE196F633800810EB7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0EF851D7196F633800810EB7 /* HotstagramTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HotstagramTests-Info.plist"; sourceTree = "<group>"; };
+		0EF851D9196F633800810EB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0EF851DB196F633900810EB7 /* HotstagramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotstagramTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EF851AA196F633800810EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EF851B3196F633800810EB7 /* CoreGraphics.framework in Frameworks */,
+				0EF851B7196F633800810EB7 /* CoreData.framework in Frameworks */,
+				0EF851B5196F633800810EB7 /* UIKit.framework in Frameworks */,
+				0EF851B1196F633800810EB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EF851CA196F633800810EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EF851CF196F633800810EB7 /* XCTest.framework in Frameworks */,
+				0EF851D2196F633800810EB7 /* CoreData.framework in Frameworks */,
+				0EF851D1196F633800810EB7 /* UIKit.framework in Frameworks */,
+				0EF851D0196F633800810EB7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EF851A4196F633800810EB7 = {
+			isa = PBXGroup;
+			children = (
+				0EF851B8196F633800810EB7 /* Hotstagram */,
+				0EF851D5196F633800810EB7 /* HotstagramTests */,
+				0EF851AF196F633800810EB7 /* Frameworks */,
+				0EF851AE196F633800810EB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0EF851AE196F633800810EB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851AD196F633800810EB7 /* Hotstagram.app */,
+				0EF851CD196F633800810EB7 /* HotstagramTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EF851AF196F633800810EB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851B0196F633800810EB7 /* Foundation.framework */,
+				0EF851B2196F633800810EB7 /* CoreGraphics.framework */,
+				0EF851B4196F633800810EB7 /* UIKit.framework */,
+				0EF851B6196F633800810EB7 /* CoreData.framework */,
+				0EF851CE196F633800810EB7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EF851B8196F633800810EB7 /* Hotstagram */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851C1196F633800810EB7 /* AppDelegate.h */,
+				0EF851C2196F633800810EB7 /* AppDelegate.m */,
+				0EF851C7196F633800810EB7 /* Images.xcassets */,
+				0EF851C4196F633800810EB7 /* Hotstagram.xcdatamodeld */,
+				0EF851B9196F633800810EB7 /* Supporting Files */,
+			);
+			path = Hotstagram;
+			sourceTree = "<group>";
+		};
+		0EF851B9196F633800810EB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851BA196F633800810EB7 /* Hotstagram-Info.plist */,
+				0EF851BB196F633800810EB7 /* InfoPlist.strings */,
+				0EF851BE196F633800810EB7 /* main.m */,
+				0EF851C0196F633800810EB7 /* Hotstagram-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EF851D5196F633800810EB7 /* HotstagramTests */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851DB196F633900810EB7 /* HotstagramTests.m */,
+				0EF851D6196F633800810EB7 /* Supporting Files */,
+			);
+			path = HotstagramTests;
+			sourceTree = "<group>";
+		};
+		0EF851D6196F633800810EB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851D7196F633800810EB7 /* HotstagramTests-Info.plist */,
+				0EF851D8196F633800810EB7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0EF851AC196F633800810EB7 /* Hotstagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EF851DF196F633900810EB7 /* Build configuration list for PBXNativeTarget "Hotstagram" */;
+			buildPhases = (
+				0EF851A9196F633800810EB7 /* Sources */,
+				0EF851AA196F633800810EB7 /* Frameworks */,
+				0EF851AB196F633800810EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hotstagram;
+			productName = Hotstagram;
+			productReference = 0EF851AD196F633800810EB7 /* Hotstagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0EF851CC196F633800810EB7 /* HotstagramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EF851E2196F633900810EB7 /* Build configuration list for PBXNativeTarget "HotstagramTests" */;
+			buildPhases = (
+				0EF851C9196F633800810EB7 /* Sources */,
+				0EF851CA196F633800810EB7 /* Frameworks */,
+				0EF851CB196F633800810EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EF851D4196F633800810EB7 /* PBXTargetDependency */,
+			);
+			name = HotstagramTests;
+			productName = HotstagramTests;
+			productReference = 0EF851CD196F633800810EB7 /* HotstagramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EF851A5196F633800810EB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ahsieh;
+				TargetAttributes = {
+					0EF851CC196F633800810EB7 = {
+						TestTargetID = 0EF851AC196F633800810EB7;
+					};
+				};
+			};
+			buildConfigurationList = 0EF851A8196F633800810EB7 /* Build configuration list for PBXProject "Hotstagram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0EF851A4196F633800810EB7;
+			productRefGroup = 0EF851AE196F633800810EB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EF851AC196F633800810EB7 /* Hotstagram */,
+				0EF851CC196F633800810EB7 /* HotstagramTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EF851AB196F633800810EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EF851BD196F633800810EB7 /* InfoPlist.strings in Resources */,
+				0EF851C8196F633800810EB7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EF851CB196F633800810EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EF851DA196F633800810EB7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EF851A9196F633800810EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EF851C3196F633800810EB7 /* AppDelegate.m in Sources */,
+				0EF851BF196F633800810EB7 /* main.m in Sources */,
+				0EF851C6196F633800810EB7 /* Hotstagram.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EF851C9196F633800810EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EF851DC196F633900810EB7 /* HotstagramTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EF851D4196F633800810EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EF851AC196F633800810EB7 /* Hotstagram */;
+			targetProxy = 0EF851D3196F633800810EB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0EF851BB196F633800810EB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EF851BC196F633800810EB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0EF851D8196F633800810EB7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EF851D9196F633800810EB7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EF851DD196F633900810EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0EF851DE196F633900810EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0EF851E0196F633900810EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hotstagram/Hotstagram-Prefix.pch";
+				INFOPLIST_FILE = "Hotstagram/Hotstagram-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0EF851E1196F633900810EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hotstagram/Hotstagram-Prefix.pch";
+				INFOPLIST_FILE = "Hotstagram/Hotstagram-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0EF851E3196F633900810EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hotstagram.app/Hotstagram";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hotstagram/Hotstagram-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HotstagramTests/HotstagramTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0EF851E4196F633900810EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hotstagram.app/Hotstagram";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hotstagram/Hotstagram-Prefix.pch";
+				INFOPLIST_FILE = "HotstagramTests/HotstagramTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EF851A8196F633800810EB7 /* Build configuration list for PBXProject "Hotstagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EF851DD196F633900810EB7 /* Debug */,
+				0EF851DE196F633900810EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EF851DF196F633900810EB7 /* Build configuration list for PBXNativeTarget "Hotstagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EF851E0196F633900810EB7 /* Debug */,
+				0EF851E1196F633900810EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0EF851E2196F633900810EB7 /* Build configuration list for PBXNativeTarget "HotstagramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EF851E3196F633900810EB7 /* Debug */,
+				0EF851E4196F633900810EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0EF851C4196F633800810EB7 /* Hotstagram.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0EF851C5196F633800810EB7 /* Hotstagram.xcdatamodel */,
+			);
+			currentVersion = 0EF851C5196F633800810EB7 /* Hotstagram.xcdatamodel */;
+			path = Hotstagram.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0EF851A5196F633800810EB7 /* Project object */;
+}

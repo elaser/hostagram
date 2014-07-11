@@ -26,6 +26,8 @@
 		0EF851EE196F63EF00810EB7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851ED196F63EF00810EB7 /* MainViewController.m */; };
 		0EF851F3196F67A600810EB7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851F2196F67A600810EB7 /* Constants.m */; };
 		0EF851F6196F684C00810EB7 /* RESTHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851F5196F684C00810EB7 /* RESTHelper.m */; };
+		0EF851FA196F6B2700810EB7 /* AuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF851F9196F6B2700810EB7 /* AuthorizationViewController.m */; };
+		19AB140091ED4E4DACBAA162 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA599A4A30C40DFBB1E3BAC /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		0EF851F2196F67A600810EB7 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Helpers/Constants.m; sourceTree = "<group>"; };
 		0EF851F4196F684C00810EB7 /* RESTHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTHelper.h; path = Helpers/RESTHelper.h; sourceTree = "<group>"; };
 		0EF851F5196F684C00810EB7 /* RESTHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTHelper.m; path = Helpers/RESTHelper.m; sourceTree = "<group>"; };
+		0EF851F8196F6B2700810EB7 /* AuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthorizationViewController.h; path = Authorization/AuthorizationViewController.h; sourceTree = "<group>"; };
+		0EF851F9196F6B2700810EB7 /* AuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthorizationViewController.m; path = Authorization/AuthorizationViewController.m; sourceTree = "<group>"; };
+		23E0F27C2C5B454F94EC94C4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		CDA599A4A30C40DFBB1E3BAC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 				0EF851B7196F633800810EB7 /* CoreData.framework in Frameworks */,
 				0EF851B5196F633800810EB7 /* UIKit.framework in Frameworks */,
 				0EF851B1196F633800810EB7 /* Foundation.framework in Frameworks */,
+				19AB140091ED4E4DACBAA162 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +106,7 @@
 				0EF851D5196F633800810EB7 /* HotstagramTests */,
 				0EF851AF196F633800810EB7 /* Frameworks */,
 				0EF851AE196F633800810EB7 /* Products */,
+				23E0F27C2C5B454F94EC94C4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +127,7 @@
 				0EF851B4196F633800810EB7 /* UIKit.framework */,
 				0EF851B6196F633800810EB7 /* CoreData.framework */,
 				0EF851CE196F633800810EB7 /* XCTest.framework */,
+				CDA599A4A30C40DFBB1E3BAC /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 		0EF851B8196F633800810EB7 /* Hotstagram */ = {
 			isa = PBXGroup;
 			children = (
+				0EF851F7196F6B0E00810EB7 /* Authorization */,
 				0EF851F0196F678D00810EB7 /* Helpers */,
 				0EF851E5196F633E00810EB7 /* Main */,
 				0EF851C1196F633800810EB7 /* AppDelegate.h */,
@@ -203,6 +213,15 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		0EF851F7196F6B0E00810EB7 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				0EF851F8196F6B2700810EB7 /* AuthorizationViewController.h */,
+				0EF851F9196F6B2700810EB7 /* AuthorizationViewController.m */,
+			);
+			name = Authorization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -210,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EF851DF196F633900810EB7 /* Build configuration list for PBXNativeTarget "Hotstagram" */;
 			buildPhases = (
+				553D8A23C6DA4E499D8EAAE4 /* Check Pods Manifest.lock */,
 				0EF851A9196F633800810EB7 /* Sources */,
 				0EF851AA196F633800810EB7 /* Frameworks */,
 				0EF851AB196F633800810EB7 /* Resources */,
+				EC6DA74414FD477D93C4BB61 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,6 +315,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		553D8A23C6DA4E499D8EAAE4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC6DA74414FD477D93C4BB61 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0EF851A9196F633800810EB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -305,6 +359,7 @@
 				0EF851C6196F633800810EB7 /* Hotstagram.xcdatamodeld in Sources */,
 				0EF851EE196F63EF00810EB7 /* MainViewController.m in Sources */,
 				0EF851F6196F684C00810EB7 /* RESTHelper.m in Sources */,
+				0EF851FA196F6B2700810EB7 /* AuthorizationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +473,7 @@
 		};
 		0EF851E0196F633900810EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23E0F27C2C5B454F94EC94C4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -431,6 +487,7 @@
 		};
 		0EF851E1196F633900810EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23E0F27C2C5B454F94EC94C4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -501,6 +558,7 @@
 				0EF851E1196F633900810EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EF851E2196F633900810EB7 /* Build configuration list for PBXNativeTarget "HotstagramTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +567,7 @@
 				0EF851E4196F633900810EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -12,6 +12,9 @@
 
 extern NSString *const kINStagramClientID;
 extern NSString *const kINStagramClientSecretKey;
+extern NSString *const kINStagramBaseURL;
+extern NSString *const kINStagramAuthorizationURL;
 
+extern NSString *const kHOTredirectionURI;
 
 @end

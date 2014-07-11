@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class AFHTTPRequestOperation;
+
 @interface RESTHelper : NSObject
 
 + (RESTHelper *) sharedInstance;
+
+- (void) obtainRecentMediaWithTag: (NSString *) tag;
+- (void) authenticateUserWithSuccess: (void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end
